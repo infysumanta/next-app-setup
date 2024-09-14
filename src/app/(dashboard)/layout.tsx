@@ -1,3 +1,4 @@
+import LanguageToggle from "@/components/language-toggle";
 import NavUserMenu from "@/components/nav-user-menu";
 import DesktopSidebar from "@/components/sidebar/desktop-sidear";
 import MobileSidebar from "@/components/sidebar/mobile-sidebar";
@@ -32,6 +33,7 @@ const DashboardLayout = ({ children }: Props) => {
             <div className="w-full flex-1">
               {/* header bar middle section */}
             </div>
+            <LanguageToggle />
             <ThemeToggle />
             <NavUserMenu />
           </header>
