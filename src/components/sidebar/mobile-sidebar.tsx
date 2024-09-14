@@ -4,7 +4,14 @@ import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { SIDEBAR_MENU_ITEM } from "@/lib/constant";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -20,9 +27,18 @@ const MobileSidebar = () => {
           <span className="sr-only">Toggle navigation menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="flex flex-col">
-        <div className="text-2xl font-semibold">{appConfig.appName}</div>
 
+      <SheetContent
+        side="left"
+        className="flex flex-col"
+        aria-describedby="mobile-sidebar"
+      >
+        <SheetHeader>
+          <SheetTitle className="text-2xl font-semibold">
+            {appConfig.appName}
+          </SheetTitle>
+          <SheetDescription>{appConfig.appDescription}</SheetDescription>
+        </SheetHeader>
         <nav className="grid gap-2 text-lg font-medium">
           {SIDEBAR_MENU_ITEM.map((item, index) => {
             const { href, icon: Icon, label, route_group } = item;

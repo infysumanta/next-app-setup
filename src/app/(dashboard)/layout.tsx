@@ -22,6 +22,9 @@ const DashboardLayout = ({ children }: Props) => {
                 <span className="text-2xl font-semibold">
                   {appConfig.appName}
                 </span>
+                <span className="text-muted-foreground text-sm">
+                  {appConfig.appDescription}
+                </span>
               </Link>
             </div>
             <DesktopSidebar />
