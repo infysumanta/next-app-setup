@@ -18,7 +18,7 @@ const DesktopSidebar = () => {
               key={index}
               href={href}
               className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-3 transition-all font-[600] text-[16px]",
+                "flex items-center gap-3 rounded-lg px-3 py-3 transition-all font-[600] text-[14px]",
                 isPathOpen
                   ? "text-muted bg-primary hover:text-primary-foreground"
                   : "text-muted-foreground hover:text-primary ",
